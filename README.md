@@ -1,4 +1,4 @@
-# Webpack Frontend Starterkit
+# Instructions to start the website
 
 to make the code works you have to get the code from this repot and follow the instructions.
 https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
