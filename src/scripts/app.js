@@ -7,10 +7,11 @@ import { button } from "./button";
 
 export const app = async () => {
   //data
-  let topRatedMoviesUrl = `http://127.0.0.1:8000/api/v1/titles/?sort_by=-imdb_score&page_size=7`;
-  let actionMoviesUrl = `http://127.0.0.1:8000/api/v1/titles/?genre=action&sort_by=-imdb_score&page_size=7`;
-  let comedyMoviesUrl = `http://127.0.0.1:8000/api/v1/titles/?genre=comedy&sort_by=-imdb_score&page_size=7`;
-  let dramaMoviesUrl = `http://127.0.0.1:8000/api/v1/titles/?genre=drama&sort_by=-imdb_score&page_size=7`;
+  const api = "http://127.0.0.1:8000/api/v1/titles/";
+  const topRatedMoviesUrl = `${api}?sort_by=-imdb_score&page_size=7`;
+  const actionMoviesUrl = `${api}?genre=action&sort_by=-imdb_score&page_size=7`;
+  const comedyMoviesUrl = `${api}?genre=comedy&sort_by=-imdb_score&page_size=7`;
+  const dramaMoviesUrl = `${api}?genre=drama&sort_by=-imdb_score&page_size=7`;
   let topRatedMovies = await getData(topRatedMoviesUrl);
   let actionMovies = await getData(actionMoviesUrl);
   let comedyMovies = await getData(comedyMoviesUrl);
