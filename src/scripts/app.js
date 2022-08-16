@@ -19,14 +19,14 @@ export const app = async () => {
 
   //HTML elements
   const bannerMovie = banner(topRatedMovies.results[0]);
-  const previousTopRatedButton = button("previousTopRated", "Previous");
-  const nextTopRatedButton = button("nextTopRated", "Next");
-  const previousActionButton = button("previousAction", "Previous");
-  const nextActionButton = button("nextAction", "Next");
-  const previousComedyButton = button("previousComedy", "Previous");
-  const nextComedyButton = button("nextComedy", "Next");
-  const previousDramaButton = button("previousDrama", "Previous");
-  const nextDramaButton = button("nextDrama", "Next");
+  const previousTopRatedButton = button("previousTopRated", "previous-button");
+  const nextTopRatedButton = button("nextTopRated", "next-button");
+  const previousActionButton = button("previousAction", "previous-button");
+  const nextActionButton = button("nextAction", "next-button");
+  const previousComedyButton = button("previousComedy", "previous-button");
+  const nextComedyButton = button("nextComedy", "next-button");
+  const previousDramaButton = button("previousDrama", "previous-button");
+  const nextDramaButton = button("nextDrama", "next-button");
   const topRatedMoviesList = moviesList(topRatedMovies.results, "topRated");
   const actionMoviesList = moviesList(actionMovies.results, "action");
   const comedyMoviesList = moviesList(comedyMovies.results, "comedy");
@@ -98,7 +98,7 @@ export const app = async () => {
 
   async function handlePreviousComedyButton() {
     dramaMovies = await getData(dramaMovies.previous);
-    document.getElementById("drama").innerHTML = moviesList(
+    document.getElementById("comedy").innerHTML = moviesList(
       dramaMovies.results,
       "drama"
     );
@@ -114,7 +114,7 @@ export const app = async () => {
 
   async function handlePreviousDramaButton() {
     comedyMovies = await getData(comedyMovies.previous);
-    document.getElementById("comedy").innerHTML = moviesList(
+    document.getElementById("drama").innerHTML = moviesList(
       comedyMovies.results,
       "comedy"
     );
